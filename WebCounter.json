@@ -1,0 +1,1863 @@
+[
+    {
+        "id": "af0b5d0d2ab3cb2e",
+        "type": "tab",
+        "label": "MQTT",
+        "disabled": false,
+        "info": "",
+        "env": []
+    },
+    {
+        "id": "49e232b33d07bb61",
+        "type": "tab",
+        "label": "Initialize",
+        "disabled": false,
+        "info": "",
+        "env": []
+    },
+    {
+        "id": "7bb0278e70b5ebd2",
+        "type": "tab",
+        "label": "Buttons",
+        "disabled": false,
+        "info": "",
+        "env": []
+    },
+    {
+        "id": "ed2d185d1099b5c7",
+        "type": "tab",
+        "label": "Repository Service",
+        "disabled": false,
+        "info": "",
+        "env": []
+    },
+    {
+        "id": "1ba050bee66001b6",
+        "type": "tab",
+        "label": "Display Reports",
+        "disabled": false,
+        "info": "",
+        "env": []
+    },
+    {
+        "id": "0560edb335f590df",
+        "type": "ui_base",
+        "theme": {
+            "name": "theme-dark",
+            "lightTheme": {
+                "default": "#0094CE",
+                "baseColor": "#0094CE",
+                "baseFont": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif",
+                "edited": true,
+                "reset": false
+            },
+            "darkTheme": {
+                "default": "#097479",
+                "baseColor": "#097479",
+                "baseFont": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif",
+                "edited": true,
+                "reset": false
+            },
+            "customTheme": {
+                "name": "Untitled Theme 1",
+                "default": "#4B7930",
+                "baseColor": "#4B7930",
+                "baseFont": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif"
+            },
+            "themeState": {
+                "base-color": {
+                    "default": "#097479",
+                    "value": "#097479",
+                    "edited": false
+                },
+                "page-titlebar-backgroundColor": {
+                    "value": "#097479",
+                    "edited": false
+                },
+                "page-backgroundColor": {
+                    "value": "#111111",
+                    "edited": false
+                },
+                "page-sidebar-backgroundColor": {
+                    "value": "#333333",
+                    "edited": false
+                },
+                "group-textColor": {
+                    "value": "#0eb8c0",
+                    "edited": false
+                },
+                "group-borderColor": {
+                    "value": "#555555",
+                    "edited": false
+                },
+                "group-backgroundColor": {
+                    "value": "#333333",
+                    "edited": false
+                },
+                "widget-textColor": {
+                    "value": "#eeeeee",
+                    "edited": false
+                },
+                "widget-backgroundColor": {
+                    "value": "#097479",
+                    "edited": false
+                },
+                "widget-borderColor": {
+                    "value": "#333333",
+                    "edited": false
+                },
+                "base-font": {
+                    "value": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif"
+                }
+            },
+            "angularTheme": {
+                "primary": "indigo",
+                "accents": "blue",
+                "warn": "red",
+                "background": "grey",
+                "palette": "light"
+            }
+        },
+        "site": {
+            "name": "Node-RED Dashboard",
+            "hideToolbar": "false",
+            "allowSwipe": "false",
+            "lockMenu": "false",
+            "allowTempTheme": "true",
+            "dateFormat": "DD/MM/YYYY",
+            "sizes": {
+                "sx": 48,
+                "sy": 48,
+                "gx": 6,
+                "gy": 6,
+                "cx": 6,
+                "cy": 6,
+                "px": 0,
+                "py": 0
+            }
+        }
+    },
+    {
+        "id": "2a2fc29bf661dcbd",
+        "type": "mqtt-broker",
+        "name": "",
+        "broker": "192.168.0.37",
+        "port": "1883",
+        "clientid": "",
+        "autoConnect": true,
+        "usetls": false,
+        "protocolVersion": "4",
+        "keepalive": "60",
+        "cleansession": true,
+        "birthTopic": "",
+        "birthQos": "0",
+        "birthPayload": "",
+        "birthMsg": {},
+        "closeTopic": "",
+        "closeQos": "0",
+        "closePayload": "",
+        "closeMsg": {},
+        "willTopic": "",
+        "willQos": "0",
+        "willPayload": "",
+        "willMsg": {},
+        "userProps": "",
+        "sessionExpiry": ""
+    },
+    {
+        "id": "bf12acc8ce16bfec",
+        "type": "ui_tab",
+        "name": "Γραφεία Εταιρείας",
+        "icon": "dashboard",
+        "order": 2,
+        "disabled": false,
+        "hidden": false
+    },
+    {
+        "id": "27c3d951.18a4e6",
+        "type": "ui_group",
+        "name": "Κτίριο",
+        "tab": "bf12acc8ce16bfec",
+        "order": 3,
+        "disp": true,
+        "width": "20",
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "2bc51abb21e7c37b",
+        "type": "sqlitedb",
+        "db": "C:/sensordata.db",
+        "mode": "RWC"
+    },
+    {
+        "id": "ac461bf5cd797690",
+        "type": "ui_group",
+        "name": "Επιλογές",
+        "tab": "bf12acc8ce16bfec",
+        "order": 1,
+        "disp": true,
+        "width": "6",
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "7d80c3521c2433fd",
+        "type": "ui_spacer",
+        "z": "7bb0278e70b5ebd2",
+        "name": "spacer",
+        "group": "ac461bf5cd797690",
+        "order": 5,
+        "width": 6,
+        "height": 1
+    },
+    {
+        "id": "a57f8e27a952c3b7",
+        "type": "ui_spacer",
+        "z": "7bb0278e70b5ebd2",
+        "name": "spacer",
+        "group": "ac461bf5cd797690",
+        "order": 10,
+        "width": 6,
+        "height": 1
+    },
+    {
+        "id": "d29985529515b9fc",
+        "type": "ui_spacer",
+        "z": "7bb0278e70b5ebd2",
+        "name": "spacer",
+        "group": "ac461bf5cd797690",
+        "order": 11,
+        "width": 6,
+        "height": 1
+    },
+    {
+        "id": "48e0e49af9daf0bc",
+        "type": "ui_spacer",
+        "z": "7bb0278e70b5ebd2",
+        "name": "spacer",
+        "group": "ac461bf5cd797690",
+        "order": 12,
+        "width": 6,
+        "height": 1
+    },
+    {
+        "id": "9fd9da6301c940e9",
+        "type": "inject",
+        "z": "af0b5d0d2ab3cb2e",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "300",
+        "crontab": "",
+        "once": true,
+        "onceDelay": "30",
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 210,
+        "y": 140,
+        "wires": [
+            [
+                "db324251d0f189fc"
+            ]
+        ]
+    },
+    {
+        "id": "db324251d0f189fc",
+        "type": "function",
+        "z": "af0b5d0d2ab3cb2e",
+        "name": "Global Full Ip",
+        "func": "msg.payload = global.get('fullIp');\nmsg.topic = \"Test_Counter/IPs\"\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 410,
+        "y": 140,
+        "wires": [
+            [
+                "eeecbbc11679e37b",
+                "467a77adc8603916"
+            ]
+        ]
+    },
+    {
+        "id": "eeecbbc11679e37b",
+        "type": "mqtt out",
+        "z": "af0b5d0d2ab3cb2e",
+        "name": "Master IPs",
+        "topic": "",
+        "qos": "",
+        "retain": "",
+        "respTopic": "",
+        "contentType": "",
+        "userProps": "",
+        "correl": "",
+        "expiry": "",
+        "broker": "2a2fc29bf661dcbd",
+        "x": 610,
+        "y": 140,
+        "wires": []
+    },
+    {
+        "id": "467a77adc8603916",
+        "type": "debug",
+        "z": "af0b5d0d2ab3cb2e",
+        "name": "debug 3",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 600,
+        "y": 200,
+        "wires": []
+    },
+    {
+        "id": "545ddb7b533bb496",
+        "type": "inject",
+        "z": "af0b5d0d2ab3cb2e",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "true",
+        "payloadType": "bool",
+        "x": 230,
+        "y": 200,
+        "wires": [
+            [
+                "db324251d0f189fc"
+            ]
+        ]
+    },
+    {
+        "id": "a568709a26417a91",
+        "type": "inject",
+        "z": "49e232b33d07bb61",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "00 00 * * *",
+        "once": true,
+        "onceDelay": "3",
+        "topic": "",
+        "payload": "true",
+        "payloadType": "bool",
+        "x": 150,
+        "y": 160,
+        "wires": [
+            [
+                "5ea22cf2ec83c6dd"
+            ]
+        ]
+    },
+    {
+        "id": "1e1d811afe8b59d8",
+        "type": "function",
+        "z": "49e232b33d07bb61",
+        "name": "Set date and time globals",
+        "func": "global.set('myymd', msg.myymd);\nglobal.set('mytimes', msg.mytimes);\nglobal.set('myepoch', msg.myepoch);\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 510,
+        "y": 160,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "873750d258d5a3e4",
+        "type": "comment",
+        "z": "49e232b33d07bb61",
+        "name": "Initialize variables",
+        "info": "",
+        "x": 170,
+        "y": 100,
+        "wires": []
+    },
+    {
+        "id": "573ad52ff3ef97dc",
+        "type": "comment",
+        "z": "49e232b33d07bb61",
+        "name": "Test initializers",
+        "info": "",
+        "x": 160,
+        "y": 500,
+        "wires": []
+    },
+    {
+        "id": "2414fc15d88b40b2",
+        "type": "function",
+        "z": "49e232b33d07bb61",
+        "name": "Get initializers",
+        "func": "msg.payload = [{\n    \"Time and Date\":[{\n        \"My year/month/date\":global.get('myymd'),\n        \"My times\":global.get('mytimes'),\n        \"My epoch\":global.get('myepoch')\n    }]\n}]\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 320,
+        "y": 560,
+        "wires": [
+            [
+                "ccc7f00772997c3e"
+            ]
+        ]
+    },
+    {
+        "id": "07e5a1ae147d421c",
+        "type": "inject",
+        "z": "49e232b33d07bb61",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "true",
+        "payloadType": "bool",
+        "x": 150,
+        "y": 560,
+        "wires": [
+            [
+                "2414fc15d88b40b2"
+            ]
+        ]
+    },
+    {
+        "id": "ccc7f00772997c3e",
+        "type": "debug",
+        "z": "49e232b33d07bb61",
+        "name": "debug 4",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 500,
+        "y": 560,
+        "wires": []
+    },
+    {
+        "id": "5ea22cf2ec83c6dd",
+        "type": "simpletime",
+        "z": "49e232b33d07bb61",
+        "name": "Get Time",
+        "mydate": true,
+        "myymd": true,
+        "myyear": true,
+        "mymonth": true,
+        "mymonthn": true,
+        "mydom": true,
+        "mydoy": true,
+        "myday": true,
+        "myhourpm": true,
+        "myhour": true,
+        "mytime": true,
+        "mytimes": true,
+        "myminute": true,
+        "myminutes": true,
+        "mysecond": true,
+        "mymillis": true,
+        "myepoch": true,
+        "myrawdate": true,
+        "mypm": true,
+        "x": 300,
+        "y": 160,
+        "wires": [
+            [
+                "1e1d811afe8b59d8"
+            ]
+        ]
+    },
+    {
+        "id": "ce213af7e28fcc4e",
+        "type": "ui_button",
+        "z": "7bb0278e70b5ebd2",
+        "name": "",
+        "group": "ac461bf5cd797690",
+        "order": 3,
+        "width": 0,
+        "height": 0,
+        "passthru": false,
+        "label": "ΕΙΣΟΔΟΣ ΚΤΙΡΟΥ",
+        "tooltip": "",
+        "color": "",
+        "bgcolor": "",
+        "className": "",
+        "icon": "",
+        "payload": "",
+        "payloadType": "str",
+        "topic": "entry",
+        "topicType": "str",
+        "x": 410,
+        "y": 240,
+        "wires": [
+            [
+                "5aa63539fb786c79"
+            ]
+        ]
+    },
+    {
+        "id": "bccf8853f561554c",
+        "type": "ui_button",
+        "z": "7bb0278e70b5ebd2",
+        "name": "",
+        "group": "ac461bf5cd797690",
+        "order": 4,
+        "width": 0,
+        "height": 0,
+        "passthru": false,
+        "label": "ΕΞΟΔΟΣ ΚΤΙΡΟΥ",
+        "tooltip": "",
+        "color": "",
+        "bgcolor": "",
+        "className": "",
+        "icon": "",
+        "payload": "",
+        "payloadType": "str",
+        "topic": "exit",
+        "topicType": "str",
+        "x": 410,
+        "y": 280,
+        "wires": [
+            [
+                "5aa63539fb786c79"
+            ]
+        ]
+    },
+    {
+        "id": "5de795c18ec3a9fe",
+        "type": "ui_button",
+        "z": "7bb0278e70b5ebd2",
+        "name": "",
+        "group": "ac461bf5cd797690",
+        "order": 2,
+        "width": 0,
+        "height": 0,
+        "passthru": true,
+        "label": "ΠΛΗΡΟΤΗΤΑ",
+        "tooltip": "",
+        "color": "",
+        "bgcolor": "",
+        "className": "",
+        "icon": "",
+        "payload": "",
+        "payloadType": "str",
+        "topic": "plenitude",
+        "topicType": "str",
+        "x": 400,
+        "y": 200,
+        "wires": [
+            [
+                "5aa63539fb786c79"
+            ]
+        ]
+    },
+    {
+        "id": "dd2259b7be1d8f6e",
+        "type": "comment",
+        "z": "7bb0278e70b5ebd2",
+        "name": "Επιλογή Γραφήματος",
+        "info": "",
+        "x": 280,
+        "y": 100,
+        "wires": []
+    },
+    {
+        "id": "f79ab156ef52aed7",
+        "type": "ui_button",
+        "z": "7bb0278e70b5ebd2",
+        "name": "",
+        "group": "ac461bf5cd797690",
+        "order": 7,
+        "width": 3,
+        "height": 1,
+        "passthru": false,
+        "label": "ΧΤΕΣ",
+        "tooltip": "",
+        "color": "",
+        "bgcolor": "",
+        "className": "",
+        "icon": "",
+        "payload": "",
+        "payloadType": "str",
+        "topic": "yesterday",
+        "topicType": "str",
+        "x": 630,
+        "y": 620,
+        "wires": [
+            [
+                "9e8a41a108c0b0b8"
+            ]
+        ]
+    },
+    {
+        "id": "e5b046d0553b324e",
+        "type": "ui_text",
+        "z": "7bb0278e70b5ebd2",
+        "group": "ac461bf5cd797690",
+        "order": 6,
+        "width": 0,
+        "height": 0,
+        "name": "",
+        "label": "Επιλογη Ημ/νίας",
+        "format": "{{msg.payload}}",
+        "layout": "row-spread",
+        "className": "",
+        "x": 660,
+        "y": 580,
+        "wires": []
+    },
+    {
+        "id": "824a4652a401893b",
+        "type": "ui_text",
+        "z": "7bb0278e70b5ebd2",
+        "group": "ac461bf5cd797690",
+        "order": 1,
+        "width": 6,
+        "height": 1,
+        "name": "",
+        "label": "Επιλογή Γραφήματος",
+        "format": "{{msg.payload}}",
+        "layout": "row-spread",
+        "className": "",
+        "x": 420,
+        "y": 160,
+        "wires": []
+    },
+    {
+        "id": "020ef31f2385e4cb",
+        "type": "ui_button",
+        "z": "7bb0278e70b5ebd2",
+        "name": "",
+        "group": "ac461bf5cd797690",
+        "order": 8,
+        "width": 3,
+        "height": 1,
+        "passthru": false,
+        "label": "ΣΗΜΕΡΑ",
+        "tooltip": "",
+        "color": "",
+        "bgcolor": "",
+        "className": "",
+        "icon": "",
+        "payload": "",
+        "payloadType": "str",
+        "topic": "today",
+        "topicType": "str",
+        "x": 640,
+        "y": 660,
+        "wires": [
+            [
+                "9e8a41a108c0b0b8"
+            ]
+        ]
+    },
+    {
+        "id": "d485e3903b4620b2",
+        "type": "ui_dropdown",
+        "z": "7bb0278e70b5ebd2",
+        "name": "",
+        "label": "Ημερομηνία",
+        "tooltip": "",
+        "place": "Επιλογή Ημ/νίας",
+        "group": "ac461bf5cd797690",
+        "order": 9,
+        "width": 6,
+        "height": 1,
+        "passthru": false,
+        "multiple": false,
+        "options": [],
+        "payload": "",
+        "topic": "datepicker",
+        "topicType": "str",
+        "className": "",
+        "x": 650,
+        "y": 700,
+        "wires": [
+            [
+                "9e8a41a108c0b0b8",
+                "710d66a605518f80"
+            ]
+        ]
+    },
+    {
+        "id": "7247544aa7059b11",
+        "type": "comment",
+        "z": "7bb0278e70b5ebd2",
+        "name": "Επιλογη Ημ/νίας",
+        "info": "",
+        "x": 260,
+        "y": 520,
+        "wires": []
+    },
+    {
+        "id": "c7561cbff08f08f4",
+        "type": "function",
+        "z": "7bb0278e70b5ebd2",
+        "name": "Clear Chart",
+        "func": "msg.payload = [];\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 410,
+        "y": 980,
+        "wires": [
+            [
+                "3bde262b5e06983f"
+            ]
+        ]
+    },
+    {
+        "id": "c6a097a2690319fe",
+        "type": "ui_button",
+        "z": "7bb0278e70b5ebd2",
+        "name": "",
+        "group": "ac461bf5cd797690",
+        "order": 13,
+        "width": 0,
+        "height": 0,
+        "passthru": false,
+        "label": "CLEAR",
+        "tooltip": "",
+        "color": "",
+        "bgcolor": "",
+        "className": "",
+        "icon": "",
+        "payload": "",
+        "payloadType": "str",
+        "topic": "clear",
+        "topicType": "str",
+        "x": 240,
+        "y": 980,
+        "wires": [
+            [
+                "c7561cbff08f08f4"
+            ]
+        ]
+    },
+    {
+        "id": "6913d820a579d165",
+        "type": "link out",
+        "z": "7bb0278e70b5ebd2",
+        "name": "link_out_επιλογη_γραηματος_btns",
+        "mode": "link",
+        "links": [
+            "7d95afb08ae9be08",
+            "b0fadd86a64823c5"
+        ],
+        "x": 795,
+        "y": 240,
+        "wires": []
+    },
+    {
+        "id": "1b799ec686b06b2b",
+        "type": "link out",
+        "z": "7bb0278e70b5ebd2",
+        "name": "link_out_επιλογη_ημερομηνιας_btns",
+        "mode": "link",
+        "links": [
+            "56a4bdc551983bd2",
+            "7d95afb08ae9be08",
+            "b0fadd86a64823c5"
+        ],
+        "x": 995,
+        "y": 660,
+        "wires": []
+    },
+    {
+        "id": "3bde262b5e06983f",
+        "type": "link out",
+        "z": "7bb0278e70b5ebd2",
+        "name": "link_out_clear_chart_btns",
+        "mode": "link",
+        "links": [
+            "46c9d3782518da24"
+        ],
+        "x": 535,
+        "y": 980,
+        "wires": []
+    },
+    {
+        "id": "e7f69204da7f834b",
+        "type": "comment",
+        "z": "7bb0278e70b5ebd2",
+        "name": "Clear Chart",
+        "info": "",
+        "x": 250,
+        "y": 920,
+        "wires": []
+    },
+    {
+        "id": "5aa63539fb786c79",
+        "type": "function",
+        "z": "7bb0278e70b5ebd2",
+        "name": "Set locationId global",
+        "func": "let locationId = 1;\n\nswitch(msg.topic){\n    case \"entry\": locationId = 1; break;\n    case \"exit\": locationId = 2; break;\n}\n\n//global.set('topic', msg.topic);\nglobal.set('locationTopic', msg.topic);\nglobal.set('locationId', locationId);\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 640,
+        "y": 240,
+        "wires": [
+            [
+                "6913d820a579d165"
+            ]
+        ]
+    },
+    {
+        "id": "9e8a41a108c0b0b8",
+        "type": "function",
+        "z": "7bb0278e70b5ebd2",
+        "name": "Set chosen date global",
+        "func": "let chosenDate = global.get('myymd');\n\nswitch(msg.topic){\n    case \"yesterday\":\n        let date = new Date();\n        date.setDate(date.getDate() - 1);\n        let year = date.toLocaleString(\"default\", { year: \"numeric\" });\n        let month = date.toLocaleString(\"default\", { month: \"2-digit\" });\n        let day = date.toLocaleString(\"default\", { day: \"2-digit\" });; \n        chosenDate = year+\"-\"+month+\"-\"+day; \n        break;\n    case \"today\": chosenDate = global.get('myymd'); break;\n    case \"datepicker\": chosenDate = msg.payload; break;\n}\n\nglobal.set('dateTopic', msg.topic);\nglobal.set('chosenDate', chosenDate);\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 840,
+        "y": 660,
+        "wires": [
+            [
+                "1b799ec686b06b2b"
+            ]
+        ]
+    },
+    {
+        "id": "5425dcd855f4086e",
+        "type": "function",
+        "z": "7bb0278e70b5ebd2",
+        "name": "Pass dates to dropdown",
+        "func": "let distinctDates = global.get('distinctDates');\nlet chosenDate = global.get('chosenDate');\nlet options = [];\n\nfor(let i = 0; i < distinctDates.length; i++){\n    options.push(distinctDates[i].currentdate);  \n}\n\nmsg.options = options;\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 430,
+        "y": 720,
+        "wires": [
+            [
+                "d485e3903b4620b2"
+            ]
+        ]
+    },
+    {
+        "id": "f447063c8008f013",
+        "type": "inject",
+        "z": "7bb0278e70b5ebd2",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": true,
+        "onceDelay": "3",
+        "topic": "",
+        "payload": "",
+        "payloadType": "str",
+        "x": 250,
+        "y": 200,
+        "wires": [
+            [
+                "5de795c18ec3a9fe"
+            ]
+        ]
+    },
+    {
+        "id": "cbab53ac5ab9352f",
+        "type": "link in",
+        "z": "7bb0278e70b5ebd2",
+        "name": "link_in_dates_to_dropdown",
+        "links": [
+            "62b31093af837525"
+        ],
+        "x": 275,
+        "y": 720,
+        "wires": [
+            [
+                "5425dcd855f4086e"
+            ]
+        ]
+    },
+    {
+        "id": "710d66a605518f80",
+        "type": "debug",
+        "z": "7bb0278e70b5ebd2",
+        "name": "debug 9",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 840,
+        "y": 740,
+        "wires": []
+    },
+    {
+        "id": "82a6b0bbf34fbac4",
+        "type": "function",
+        "z": "7bb0278e70b5ebd2",
+        "name": "Change selected option",
+        "func": "msg.payload = global.get('chosenDate') != undefined ? global.get('chosenDate') : 1;\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 430,
+        "y": 680,
+        "wires": [
+            [
+                "d485e3903b4620b2"
+            ]
+        ]
+    },
+    {
+        "id": "56a4bdc551983bd2",
+        "type": "link in",
+        "z": "7bb0278e70b5ebd2",
+        "name": "link_in_yolo",
+        "links": [
+            "1b799ec686b06b2b"
+        ],
+        "x": 275,
+        "y": 680,
+        "wires": [
+            [
+                "82a6b0bbf34fbac4"
+            ]
+        ]
+    },
+    {
+        "id": "f03b757ec4e4cfd7",
+        "type": "function",
+        "z": "ed2d185d1099b5c7",
+        "name": "Delete all",
+        "func": "msg.topic = \"DELETE FROM countereadings\";\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 560,
+        "y": 140,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "2bca07a8e05348f9",
+        "type": "inject",
+        "z": "ed2d185d1099b5c7",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "true",
+        "payloadType": "bool",
+        "x": 250,
+        "y": 140,
+        "wires": [
+            [
+                "f03b757ec4e4cfd7"
+            ]
+        ]
+    },
+    {
+        "id": "7f9f15cfc9ad9adc",
+        "type": "function",
+        "z": "ed2d185d1099b5c7",
+        "name": "Drop Table countereadings",
+        "func": "msg.topic = \"DROP TABLE countereadings\";\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 500,
+        "y": 180,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "34483e21680d7ccd",
+        "type": "inject",
+        "z": "ed2d185d1099b5c7",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "true",
+        "payloadType": "bool",
+        "x": 250,
+        "y": 180,
+        "wires": [
+            [
+                "7f9f15cfc9ad9adc"
+            ]
+        ]
+    },
+    {
+        "id": "edf6ea4793d84949",
+        "type": "function",
+        "z": "ed2d185d1099b5c7",
+        "name": "Create table countereadings",
+        "func": "msg.topic = \"CREATE TABLE countereadings(id INTEGER PRIMARY KEY AUTOINCREMENT,  fulldate TEXT, currentdate DATE, currentime TIME, locationID INTEGER, sync INTEGER);\";\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 500,
+        "y": 220,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "548d9842d7b09daf",
+        "type": "inject",
+        "z": "ed2d185d1099b5c7",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "true",
+        "payloadType": "bool",
+        "x": 250,
+        "y": 220,
+        "wires": [
+            [
+                "edf6ea4793d84949"
+            ]
+        ]
+    },
+    {
+        "id": "edb9f164da2a71f7",
+        "type": "sqlite",
+        "z": "ed2d185d1099b5c7",
+        "mydb": "2bc51abb21e7c37b",
+        "sql": "",
+        "name": "Node Red DB",
+        "x": 520,
+        "y": 480,
+        "wires": [
+            [
+                "ad489b4221f22178"
+            ]
+        ]
+    },
+    {
+        "id": "31755cb716f50320",
+        "type": "file",
+        "z": "ed2d185d1099b5c7",
+        "name": "",
+        "filename": "C:/data.txt",
+        "filenameType": "str",
+        "appendNewline": true,
+        "createDir": false,
+        "overwriteFile": "true",
+        "encoding": "none",
+        "x": 1030,
+        "y": 520,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "cf769ce69aca5557",
+        "type": "function",
+        "z": "ed2d185d1099b5c7",
+        "name": "Pass data to chart",
+        "func": "let r = msg.payload;\nlet serie = [];\nlet data = [];\nlet labels = [];\n\nif(r.length > 0){\n    serie = [r[0].Name];\n    data = [r.map(v => ({\n        \"x\": (new Date(Number(v.timeStamp))).toISOString(),\n        \"y\": v.value\n    }))];\n}\nelse{\n    serie = [\"Vehicle\"];\n    data = [\n        [{}]\n    ]\n}\nmsg.payload = [{ \"series\": serie, \"data\": data}];\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 790,
+        "y": 560,
+        "wires": [
+            [
+                "31755cb716f50320",
+                "4e5097d6c53c4f9c"
+            ]
+        ]
+    },
+    {
+        "id": "ad489b4221f22178",
+        "type": "function",
+        "z": "ed2d185d1099b5c7",
+        "name": "Map each value to another obj",
+        "func": "let obj = [];\nfor(let i = 0; i < msg.payload.length; i++){\n    obj.push({\n        \"Name\": \"Vehicle\",\n        \"timeStamp\": msg.payload[i].fulldate,\n        \"value\": (i + 1)\n    })\n}\n\nmsg.payload = obj;\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 770,
+        "y": 480,
+        "wires": [
+            [
+                "cf769ce69aca5557"
+            ]
+        ]
+    },
+    {
+        "id": "ec0916ea359720d5",
+        "type": "comment",
+        "z": "ed2d185d1099b5c7",
+        "name": "Delete and drop",
+        "info": "",
+        "x": 260,
+        "y": 80,
+        "wires": []
+    },
+    {
+        "id": "7d95afb08ae9be08",
+        "type": "link in",
+        "z": "ed2d185d1099b5c7",
+        "name": "link_in_querries",
+        "links": [
+            "6913d820a579d165",
+            "1b799ec686b06b2b"
+        ],
+        "x": 195,
+        "y": 580,
+        "wires": [
+            [
+                "bd62efba251aa18f"
+            ]
+        ]
+    },
+    {
+        "id": "4e5097d6c53c4f9c",
+        "type": "link out",
+        "z": "ed2d185d1099b5c7",
+        "name": "link_out_querries",
+        "mode": "link",
+        "links": [
+            "46c9d3782518da24"
+        ],
+        "x": 1115,
+        "y": 560,
+        "wires": []
+    },
+    {
+        "id": "a624d5b84c9a70dd",
+        "type": "function",
+        "z": "ed2d185d1099b5c7",
+        "name": "Inert into db",
+        "func": "let date = msg.myymd;\nlet time = msg.mytimes;\nlet fulldate = msg.myepoch;\nlet locationId = msg.payload;\n\nmsg.topic = \"INSERT INTO countereadings (fulldate,currentdate,currentime,locationID,sync) \\\nVALUES ( '\" + fulldate + \"' ,'\" + date + \"', '\" + time + \"',  '\" + locationId + \"','0')\";\n\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 530,
+        "y": 1480,
+        "wires": [
+            [
+                "e8a3ade44c1ec059"
+            ]
+        ]
+    },
+    {
+        "id": "e80f77bf14e698e1",
+        "type": "link in",
+        "z": "ed2d185d1099b5c7",
+        "name": "Write To SqLite For IN",
+        "links": [
+            "09d2be35f8b102e4",
+            "6f38237c1a317178"
+        ],
+        "x": 195,
+        "y": 1480,
+        "wires": [
+            [
+                "6068c54f7b774d23"
+            ]
+        ]
+    },
+    {
+        "id": "d6682106d8625d6d",
+        "type": "debug",
+        "z": "ed2d185d1099b5c7",
+        "name": "debug 1",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 900,
+        "y": 1480,
+        "wires": []
+    },
+    {
+        "id": "e8a3ade44c1ec059",
+        "type": "sqlite",
+        "z": "ed2d185d1099b5c7",
+        "mydb": "2bc51abb21e7c37b",
+        "sql": "",
+        "name": "Node Red DB",
+        "x": 720,
+        "y": 1480,
+        "wires": [
+            [
+                "d6682106d8625d6d"
+            ]
+        ]
+    },
+    {
+        "id": "6de7c95be1e447db",
+        "type": "inject",
+        "z": "ed2d185d1099b5c7",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "1",
+        "payloadType": "num",
+        "x": 250,
+        "y": 1560,
+        "wires": [
+            [
+                "6068c54f7b774d23"
+            ]
+        ]
+    },
+    {
+        "id": "1a29d1e54823fdd7",
+        "type": "inject",
+        "z": "ed2d185d1099b5c7",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "2",
+        "payloadType": "num",
+        "x": 250,
+        "y": 1600,
+        "wires": [
+            [
+                "6068c54f7b774d23"
+            ]
+        ]
+    },
+    {
+        "id": "95add98814374904",
+        "type": "comment",
+        "z": "ed2d185d1099b5c7",
+        "name": "Create new data record",
+        "info": "",
+        "x": 280,
+        "y": 1420,
+        "wires": []
+    },
+    {
+        "id": "fc753b100305ee22",
+        "type": "comment",
+        "z": "ed2d185d1099b5c7",
+        "name": "Get from db",
+        "info": "",
+        "x": 250,
+        "y": 480,
+        "wires": []
+    },
+    {
+        "id": "dd9d9748e8017440",
+        "type": "sqlite",
+        "z": "ed2d185d1099b5c7",
+        "mydb": "2bc51abb21e7c37b",
+        "sqlquery": "msg.topic",
+        "sql": "",
+        "name": "Node Red DB",
+        "x": 720,
+        "y": 740,
+        "wires": [
+            [
+                "48d2e424e6285739"
+            ]
+        ]
+    },
+    {
+        "id": "574380cf158e46a1",
+        "type": "split",
+        "z": "ed2d185d1099b5c7",
+        "name": "Split Querries",
+        "splt": "#",
+        "spltType": "str",
+        "arraySplt": 1,
+        "arraySpltType": "len",
+        "stream": false,
+        "addname": "",
+        "x": 520,
+        "y": 660,
+        "wires": [
+            [
+                "51a20ac9c7c3c794"
+            ]
+        ]
+    },
+    {
+        "id": "51a20ac9c7c3c794",
+        "type": "function",
+        "z": "ed2d185d1099b5c7",
+        "name": "Pass querries to topic",
+        "func": "msg.topic = msg.payload;\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 740,
+        "y": 660,
+        "wires": [
+            [
+                "990f36f2e2c07a83"
+            ]
+        ]
+    },
+    {
+        "id": "48d2e424e6285739",
+        "type": "join",
+        "z": "ed2d185d1099b5c7",
+        "name": "Push incoming data to an array",
+        "mode": "custom",
+        "build": "array",
+        "property": "payload",
+        "propertyType": "msg",
+        "key": "topic",
+        "joiner": "\\n",
+        "joinerType": "str",
+        "accumulate": false,
+        "timeout": "",
+        "count": "",
+        "reduceRight": false,
+        "reduceExp": "",
+        "reduceInit": "",
+        "reduceInitType": "",
+        "reduceFixup": "",
+        "x": 970,
+        "y": 740,
+        "wires": [
+            [
+                "22ac5de37aa1aa98"
+            ]
+        ]
+    },
+    {
+        "id": "22ac5de37aa1aa98",
+        "type": "function",
+        "z": "ed2d185d1099b5c7",
+        "name": "Map querries and times to new object",
+        "func": "let date = new Date();\ndate.setHours(0, 0, 0);\nlet times = [];\n\nfor (let i = 0; i < 24; i++) {\n    let startTime = date.toISOString();\n    date.setHours(date.getHours() + 1);\n    times.push(startTime);\n}\n\nlet querries = msg.payload;\n//let times = msg.times;\nlet obj = [];\n\nif(querries.length == times.length){\n    for(let i = 0; i < 24; i++){\n        obj.push({\n            'INs':querries[i][0].INs,\n            'OUTs':querries[i][0].OUTs,\n            'Plenitude':querries[i][0].Plenitude,\n            'Currentime': times[i]\n        })\n    }\n}\n\nmsg.payload = obj;\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 670,
+        "y": 820,
+        "wires": [
+            [
+                "bdb782bdb9a02fb1",
+                "9b9e00f040d1ee1c"
+            ]
+        ]
+    },
+    {
+        "id": "bd62efba251aa18f",
+        "type": "function",
+        "z": "ed2d185d1099b5c7",
+        "name": "Select Query",
+        "func": "let date = global.get('chosenDate') == undefined ? global.get('myymd') : global.get('chosenDate');\n\nif (global.get('locationTopic') != 'plenitude'){\n    let locationId = global.get('locationId') == undefined ? 1 : global.get('locationId');\n\n    msg.topic = \"SELECT fulldate, currentdate, currentime, locationID \\\n            FROM countereadings \\\n            WHERE currentdate = ('\"+ date + \"') AND locationID = ('\" + locationId + \"')\";\n    return [msg, null];\n}\nelse{\n    let datetime = new Date();\n    datetime.setHours(0, 0, 0);\n    let queries = [];\n    msg.times = [];\n\n    for (let i = 0; i < 24; i++) {\n        let startTime = datetime.toLocaleTimeString('en-GB');\n        datetime.setHours(datetime.getHours() + 1);\n        let stopTime = datetime.toLocaleTimeString('en-GB');\n        msg.times.push(startTime);\n\n        queries.push(\"SELECT INs, OUTs, (INs - OUTs) AS Plenitude \\\n\t\tFROM (SELECT count() AS INs \\\n\t\t\tFROM countereadings \\\n\t\t\tWHERE locationID = 1 \\\n\t\t\tAND currentdate = ('\"+ date + \"') \\\n\t\t\tAND currentime BETWEEN ('\"+ startTime + \"') and ('\" + stopTime + \"')) \\\n\t\tJOIN (SELECT count() AS OUTs \\\n\t\t\tFROM countereadings \\\n\t\t\tWHERE locationID = 2 \\\n\t\t\tAND currentdate = ('\"+ date + \"') \\\n\t\t\tAND currentime BETWEEN ('\"+ startTime + \"') and ('\" + stopTime + \"'))\") + \"#\";\n    }\n\n    msg.payload = queries;\n    return [null, msg];\n}",
+        "outputs": 2,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 330,
+        "y": 580,
+        "wires": [
+            [
+                "edb9f164da2a71f7"
+            ],
+            [
+                "574380cf158e46a1"
+            ]
+        ]
+    },
+    {
+        "id": "990f36f2e2c07a83",
+        "type": "delay",
+        "z": "ed2d185d1099b5c7",
+        "name": "Delay querries",
+        "pauseType": "rate",
+        "timeout": "1",
+        "timeoutUnits": "seconds",
+        "rate": "1",
+        "nbRateUnits": "0.1",
+        "rateUnits": "second",
+        "randomFirst": "1",
+        "randomLast": "5",
+        "randomUnits": "seconds",
+        "drop": false,
+        "allowrate": false,
+        "outputs": 1,
+        "x": 960,
+        "y": 660,
+        "wires": [
+            [
+                "dd9d9748e8017440"
+            ]
+        ]
+    },
+    {
+        "id": "bdb782bdb9a02fb1",
+        "type": "debug",
+        "z": "ed2d185d1099b5c7",
+        "name": "debug 8",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 960,
+        "y": 820,
+        "wires": []
+    },
+    {
+        "id": "064ee9cdd449328a",
+        "type": "link out",
+        "z": "ed2d185d1099b5c7",
+        "name": "yolo",
+        "mode": "link",
+        "links": [
+            "46c9d3782518da24"
+        ],
+        "x": 925,
+        "y": 900,
+        "wires": []
+    },
+    {
+        "id": "9b9e00f040d1ee1c",
+        "type": "function",
+        "z": "ed2d185d1099b5c7",
+        "name": "Pass data to chart",
+        "func": "let r = msg.payload;\nlet serie = [];\nlet data = [];\nlet labels = [];\n\nif (r.length > 0) {\n    serie = [/*[\"Ins\"], [\"Outs\"],*/[\"Plenitude\"]];\n    data = [//r.map(v => ({\"x\": v.Currentime, \"y\": v.INs })),\n        //r.map(v => ({\"x\": v.Currentime, \"y\":v.OUTs})),\n        r.map(v => ({ \"x\": v.Currentime, \"y\": v.Plenitude }))];\n}\nmsg.payload = [{ \"series\": serie, \"data\": data }];\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 790,
+        "y": 900,
+        "wires": [
+            [
+                "064ee9cdd449328a"
+            ]
+        ]
+    },
+    {
+        "id": "7702d952fbd88bdd",
+        "type": "function",
+        "z": "ed2d185d1099b5c7",
+        "name": "Get distinct desc dates",
+        "func": "msg.topic = \"SELECT DISTINCT currentdate \\\n FROM countereadings ORDER BY id DESC LIMIT 10\";\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 440,
+        "y": 1160,
+        "wires": [
+            [
+                "366b628125983627"
+            ]
+        ]
+    },
+    {
+        "id": "366b628125983627",
+        "type": "sqlite",
+        "z": "ed2d185d1099b5c7",
+        "mydb": "2bc51abb21e7c37b",
+        "sql": "",
+        "name": "Node Red DB",
+        "x": 660,
+        "y": 1160,
+        "wires": [
+            [
+                "90994de949399f5b"
+            ]
+        ]
+    },
+    {
+        "id": "2f15bdb71b370f6d",
+        "type": "inject",
+        "z": "ed2d185d1099b5c7",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": true,
+        "onceDelay": "3",
+        "topic": "",
+        "payload": "true",
+        "payloadType": "bool",
+        "x": 250,
+        "y": 1160,
+        "wires": [
+            [
+                "7702d952fbd88bdd"
+            ]
+        ]
+    },
+    {
+        "id": "62b31093af837525",
+        "type": "link out",
+        "z": "ed2d185d1099b5c7",
+        "name": "link_out_distinct_dates",
+        "mode": "link",
+        "links": [
+            "cbab53ac5ab9352f"
+        ],
+        "x": 1035,
+        "y": 1160,
+        "wires": []
+    },
+    {
+        "id": "ae80696db9552031",
+        "type": "comment",
+        "z": "ed2d185d1099b5c7",
+        "name": "Get distinct dates",
+        "info": "",
+        "x": 260,
+        "y": 1080,
+        "wires": []
+    },
+    {
+        "id": "90994de949399f5b",
+        "type": "function",
+        "z": "ed2d185d1099b5c7",
+        "name": "Push dates to global",
+        "func": "global.set('distinctDates', msg.payload);\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 880,
+        "y": 1160,
+        "wires": [
+            [
+                "62b31093af837525"
+            ]
+        ]
+    },
+    {
+        "id": "6068c54f7b774d23",
+        "type": "simpletime",
+        "z": "ed2d185d1099b5c7",
+        "name": "Get Time",
+        "mydate": true,
+        "myymd": true,
+        "myyear": true,
+        "mymonth": true,
+        "mymonthn": true,
+        "mydom": true,
+        "mydoy": true,
+        "myday": true,
+        "myhourpm": true,
+        "myhour": true,
+        "mytime": true,
+        "mytimes": true,
+        "myminute": true,
+        "myminutes": true,
+        "mysecond": true,
+        "mymillis": true,
+        "myepoch": true,
+        "myrawdate": true,
+        "mypm": true,
+        "x": 360,
+        "y": 1480,
+        "wires": [
+            [
+                "a624d5b84c9a70dd"
+            ]
+        ]
+    },
+    {
+        "id": "22110cd5e0f71587",
+        "type": "ui_chart",
+        "z": "1ba050bee66001b6",
+        "name": "Γράφημα Κτιρίου",
+        "group": "27c3d951.18a4e6",
+        "order": 2,
+        "width": 0,
+        "height": 0,
+        "label": "",
+        "chartType": "line",
+        "legend": "false",
+        "xformat": "HH:mm",
+        "interpolate": "bezier",
+        "nodata": "",
+        "dot": true,
+        "ymin": "",
+        "ymax": "",
+        "removeOlder": 1,
+        "removeOlderPoints": "",
+        "removeOlderUnit": "86400",
+        "cutout": 0,
+        "useOneColor": false,
+        "useUTC": false,
+        "colors": [
+            "#0000ff",
+            "#00ff00",
+            "#ff0000",
+            "#2ca02c",
+            "#98df8a",
+            "#814141",
+            "#ff9896",
+            "#9467bd",
+            "#c5b0d5"
+        ],
+        "outputs": 1,
+        "useDifferentColor": false,
+        "className": "",
+        "x": 350,
+        "y": 220,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "46c9d3782518da24",
+        "type": "link in",
+        "z": "1ba050bee66001b6",
+        "name": "link_in_chart",
+        "links": [
+            "3bde262b5e06983f",
+            "4e5097d6c53c4f9c",
+            "064ee9cdd449328a"
+        ],
+        "x": 215,
+        "y": 220,
+        "wires": [
+            [
+                "22110cd5e0f71587"
+            ]
+        ]
+    },
+    {
+        "id": "c6d6338d02307665",
+        "type": "comment",
+        "z": "1ba050bee66001b6",
+        "name": "Chart",
+        "info": "",
+        "x": 250,
+        "y": 100,
+        "wires": []
+    },
+    {
+        "id": "89fcc0f8a8cca1c9",
+        "type": "ui_text",
+        "z": "1ba050bee66001b6",
+        "group": "27c3d951.18a4e6",
+        "order": 1,
+        "width": 20,
+        "height": 1,
+        "name": "Γράφημα Κτιρίου Label",
+        "label": "",
+        "format": "{{msg.payload}}",
+        "layout": "col-center",
+        "className": "",
+        "x": 660,
+        "y": 160,
+        "wires": []
+    },
+    {
+        "id": "739eab1f2e68b5dc",
+        "type": "function",
+        "z": "1ba050bee66001b6",
+        "name": "Get topic and change label",
+        "func": "let date = global.get('chosenDate') == undefined ? global.get('myymd') : global.get('chosenDate');\n\nswitch(global.get('locationTopic')){\n    case \"entry\": global.set('label', \"Καταμέτρηση Εισόδου\"); break;\n    case \"exit\": global.set('label', \"Καταμέτρηση Εξόδου\"); break;\n    case \"plenitude\": global.set('label', \"Πληρότητα\"); break;\n}\n\nlet label = global.get('label');\nmsg.payload = label + ` ${'('+date+')'}`;\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 400,
+        "y": 160,
+        "wires": [
+            [
+                "89fcc0f8a8cca1c9"
+            ]
+        ]
+    },
+    {
+        "id": "b0fadd86a64823c5",
+        "type": "link in",
+        "z": "1ba050bee66001b6",
+        "name": "link_in_γραγημα_κτιριου_label",
+        "links": [
+            "1b799ec686b06b2b",
+            "6913d820a579d165"
+        ],
+        "x": 215,
+        "y": 160,
+        "wires": [
+            [
+                "739eab1f2e68b5dc"
+            ]
+        ]
+    },
+    {
+        "id": "49b071382212d5bf",
+        "type": "function",
+        "z": "1ba050bee66001b6",
+        "name": "Get topic and change label",
+        "func": "let date = global.get('chosenDate') == undefined ? global.get('myymd') : global.get('chosenDate');\n\nswitch(global.get('topic')){\n    case \"entry\": global.set('label', \"Καταμέτρηση Εισόδου\"); break;\n    case \"exit\": global.set('label', \"Καταμέτρηση Εξόδου\"); break;\n    case \"plenitude\": global.set('label', \"Πληρότητα\"); break;\n}\n\nlet label = global.get('label');\nmsg.payload = label + ` ${'('+date+')'}`;\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 560,
+        "y": 100,
+        "wires": [
+            []
+        ]
+    }
+]
